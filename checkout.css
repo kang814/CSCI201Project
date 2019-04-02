@@ -1,9 +1,94 @@
 @CHARSET "UTF-8";
 
 body{
-	background-color: black;
-	
+  background-color: #c4c4c4;
+  
 }
+
+#header{
+  border-top: 8px solid black;
+  background: black;
+}
+
+.header{
+  float: left;
+  width: 100%;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid rgb(253, 185, 41);
+}
+
+.header h1 {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: black;
+  
+}
+
+/*Added this for the google maps popup modal*/
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  float:left;
+  margin-top: 15%;
+  width: 750px; /* Full width */
+  height: 450px; /* Full height */
+  background-color: white; /* Fallback color */
+  border-radius: 12px;
+  border-width: 10px;
+  border-color: coral;
+  border: 2px solid rgb(253, 185, 41);
+  
+}
+
+#modal2{
+  display: block; /* Hidden by default */
+  z-index: 2; /* Sit on top */
+  float:right;
+  margin-top: 3.25%;
+  width: 450px; /* Full width */
+  height: 320px; /* Full height */
+  background-color: white; /* Fallback color */
+  border-radius: 12px;  
+  border: 2px solid rgb(253, 185, 41);
+
+}
+
+#modal3{
+  display: block; /* Hidden by default */
+  z-index: 2; /* Sit on top */
+  float:right;
+  margin-top: 31%;  
+  margin-right: -35.5%;
+  border-color: yellow;
+  width: 450px; /* Full width */
+  height: 100px; /* Full height */
+  background-color: white; /* Fallback color */
+  border-radius: 12px;
+  border: 2px solid rgb(253, 185, 41);
+}
+
+
+
+
+
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  overflow-y: scroll;
+}
+
+
+
+
 
 .topnav {
   background-color: black;
