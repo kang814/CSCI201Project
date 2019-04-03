@@ -1,3 +1,4 @@
+package classes;
 import java.util.ArrayList;
 
 public class menuItem {
@@ -9,7 +10,7 @@ public class menuItem {
 	private int userInteract;
 	
 	
-	menuItem(String name, double price, String resta){
+	public menuItem(String name, double price, String resta){
 		this.name = name;
 		this.price = price;
 		this.restaurant = resta;
@@ -37,6 +38,14 @@ public class menuItem {
 	
 	public double getPrice(){	
 		return this.price;
+	}
+	
+	public void setRestaurant(String d){
+		this.restaurant = d;
+	}
+	
+	public String getRestuarant(){	
+		return this.restaurant;
 	}
 	
 	public void addDeal(String deal){
