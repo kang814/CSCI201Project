@@ -57,6 +57,18 @@ body{
 
 }
 
+#payButton{
+  display: block; /* Hidden by default */
+  z-index: 2; /* Sit on top */
+  float:right;
+  margin-top: -21.5%;
+  width: 125px; /* Full width */
+  height: 50px; /* Full height */
+  background-color: #00cf00; /* Fallback color */
+  border-radius: 12px;  
+
+}
+
 #modal3{
   display: block; /* Hidden by default */
   z-index: 2; /* Sit on top */

@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%
-
+	double total = 0;
 	///Test Array///
 	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
 
@@ -39,7 +39,7 @@
 	myOrder.add(myItem9);
 	myOrder.add(myItem10);
 	myOrder.add(myItem11);
-	myOrder.add(myItem12);
+	myOrder.add(myItem12); 
 
 	/*
 	//Uncomment this section when done testing
@@ -56,8 +56,13 @@
 		System.out.println(myOrder.get(i).getName());
 		System.out.println(myOrder.get(i).getRestuarant());
 		System.out.println(myOrder.get(i).getPrice());
+		total += myOrder.get(i).getPrice();
 		System.out.println("|||||||||||||||||||");
 	}
+	total = Math.round(total * 100);
+	total = total/100;
+	
+	
 	
 %>
 
@@ -73,9 +78,9 @@
 <body>
 
 <div class=header>
-	<img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart">
-	<img style="margin-left: 330px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble">
-	<img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image">
+	<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+	<a href="index.jsp"><img style="margin-left: 330px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+	<a href="checkout.jsp"><img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart"></a>
 </div>
 
 
@@ -112,7 +117,7 @@
 		%>
 		</table>
 		<%} else{%>
-			<h2>Looks like you still haven't picked your nibble...:(</h2>
+			<h2>Looks like you still haven't picked your nibble... :(</h2>
 		<%} %>
 		</div>
 	</div>
@@ -120,13 +125,19 @@
 	<div id="modal2">
 		<!-- Modal content -->
 		<div class="modal-content"></div>
-		<h2 style="margin-left: 5%;">Deals</h2>
+		<h2 style="margin-left: 5%;">Other people also like...</h2>
 	</div>
 	
 	<div id="modal3">
 		<!-- Modal content -->
-		<div class="modal-content"></div>
-		<h1 style="margin-left: 5%;">Total: </h2>
+		<div class="modal-content">
+		<h1 style="margin-left: 5%;">Total: $<%=total %></h2>
+		<h6 style="margin-left: 15%; margin-top: -8%;">(+tax)</h6>
+		
+			<div id="payButton">
+				<h3 style="color: white; margin-left: 25px;">Pay Now</h3>
+			</div>
+		</div>
 		
 	</div>
 
