@@ -1,0 +1,175 @@
+ @charset "UTF-8";
+
+html, body{
+	margin-top: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+
+#header{
+	height: 10%;
+	background-color: #E5E5E5;
+	width: 100%;
+	z-index: -1;
+}
+
+#nibble{
+	position: absolute;
+	top: 0%;
+	left: 45%;
+	font-family: Avenir;
+	font-size: 300%;
+	color: #black;
+}
+
+.topButton {
+	background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color:black;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: Avenir Next;
+	
+}
+
+#profile {
+	position: absolute;
+	top: 4%;
+	left: 20%;
+}
+
+#cart {
+	position: absolute;
+	top: 4%;
+	left: 90%;
+}
+
+#What {
+	position: absolute;
+	top: 20%;
+	left: 3%;
+}
+
+/* #search {
+	position: absolute;
+	top: 30%;
+	left: 5%;
+} */
+
+#Looking {
+	position: absolute;
+	top: 38%;
+	left: 3%;
+}
+
+#address {
+	position: absolute;
+	top: 43%;
+	left: 3%;
+}
+
+#Today {
+	position: absolute;
+	top: 50%;
+	left: 3%;
+}
+
+#Popular {
+	position: absolute;
+	top: 110%;
+	left: 3%;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
+}
+
+#bestDeals {
+	position: absolute;
+	top: 55%;
+}
+
+#popularRestaurants {
+	position: absolute;
+	top: 115%;
+}
+
+
+.card {
+    flex: 0 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    transition: 0.4s;
+    width: 300px;
+    background: #fff;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    margin: 10px;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.container {
+	padding: 2px 16px;
+}
+ 
+
+.wrap {
+	width: 1450px;
+	margin: auto;
+	margin-top:10px;
+	display: flex;
+}
+
+/* search */
+.search-box {
+	position: absolute;
+	top: 33%;
+	left: 12%;
+	transform: translate(-50%, -50%);
+	background: #F0F0F2;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+
+.search-btn {
+	color: #FFC844;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #F0F0F2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: #595959;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+}
+
+.search-box:hover > .search-txt {
+	width: 200px;
+	padding: 0 6px;
+}
+
+
+ 
