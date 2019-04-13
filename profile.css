@@ -7,20 +7,23 @@ html, body{
 	background-color: #E5E5E5;
 }
 #header{
-	height: 10%;
-	background-color: #E5E5E5;
+	
+	
+	magin-top: 100px;
+	height: 30%;
 	width: 100%;
+	background-color: #E5E5E5;
 	z-index: -1;
 }
 
-#nibble{
-	position: absolute;
-	top: 0%;
-	left: 47%;
-	font-family: Avenir;
-	font-size: 300%;
-	color: #black;
+#nibble
+{
+	color: black;
+	text-align: center;
+	font-size: 50px;
 }
+
+
 
 .topButton {
 	background:none;
@@ -32,19 +35,38 @@ html, body{
     font-size: 30px;
     font-weight: 200;
     font-family: Avenir Next;
+    
+    border-style: solid;
+    border-color: black;
+    
 	
 }
 
 #profile {
 	position: absolute;
+	border-style: solid;
+	width: 120px;
+	height: 55px;
+	border-radius: 5px;
+	
 	top: 4%;
-	left: 20%;
+	left: 10%;
+	
+
+	
 }
 
 #cart {
 	position: absolute;
 	top: 4%;
-	left: 90%;
+	left: 80%;
+	border-style: solid;
+	width: 120px;
+	height: 55px;
+	border-radius: 5px;
+	
+
+	
 }
 
 #mainDiv {
