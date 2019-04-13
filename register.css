@@ -1,20 +1,51 @@
+html
+{
+	background-image: url("food.jpg");
+	
+}
+
+
 
 #header{
 	height: 10%;
-	background-color: #E5E5E5;
+	background-color: white;
 	width: 100%;
 	z-index: -1;
 	text-align: center;
+	
 }
 
 
 #registerSite{
-	background: #ffbf91;
+	
+
+	color: #fca227;
 	text-align: center;
 	border-style: solid;
 	width: 30%;
 	margin: auto;
 	border-radius: 5px;
-	border-color: red;
+	border-color: black;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	
+}
+form
+{
+	font-size: 20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+#submitButton
+{
+	font-weight: bold;
+	height: 30px;
+	width: 120px;
+	color: white;
+	border-style: solid;
+	border-radius: 5px;
+	background: #676767;
+	border-color: #333333;
+	
 	
 }

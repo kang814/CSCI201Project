@@ -12,6 +12,7 @@
   <body>
   
   	<div id="header">
+		
 		<h1 id="nibble" onclick="goHome()">nibble.</h1>
 		<button class="topButton" id = "profile" onclick= "location.href='profile.jsp'">Profile</button>
 		<button class="topButton" id = "cart" onclick="location.href='cart.jsp'">Cart</button>

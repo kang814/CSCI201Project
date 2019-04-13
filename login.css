@@ -1,26 +1,37 @@
+html
+{
+	background-image: linear-gradient(to right, #cacaca,#393939);
+}
+
+
 html, body{
 	margin-top: 0;
 	margin: 0;
 	padding: 0;
 	font-family: Avenir;
+	
+	
+	
 }
 
 #header{
 	height: 10%;
+	
 	background-color: #E5E5E5;
 	width: 100%;
 	z-index: -1;
 	text-align: center;
+	
 }
 
 #loginSite{
-	background: #ffbf91;
+	background: #E5E5E5;
 	text-align: center;
 	border-style: solid;
 	width: 30%;
 	margin: auto;
 	border-radius: 5px;
-	border-color: red;
+	border-color: black;
 	
 }
 
@@ -29,7 +40,10 @@ html, body{
 	height: 30px;
 	width: 80px;
 	border-radius: 5px;
-	background: #ffeec6;
+	color: white;
+	background: #676767;
+	border-color: #333333;
+	
 	
 }
 
@@ -45,9 +59,9 @@ html, body{
 	width: 200px;
 	height: 40px;
 	margin: auto;
-	background:#ffbf91;
+	background:#E5E5E5;
 	border-radius: 5px;
-	border-color: red;
+	border-color: black;
 	
 }
 

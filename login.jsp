@@ -9,7 +9,9 @@
 	<div id="header">
 		<h1 id="nibble" onclick="goHome()">nibble.</h1>
 	</div>
-	
+	<br>
+	<br>
+	<br>
 	<div id="loginSite">
 		<h1>Login</h1>
 		<form action="login" method="post">
