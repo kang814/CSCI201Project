@@ -3,23 +3,40 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Register</title>
+		<link rel="stylesheet" type="text/css" href="register.css">
 	</head>
 	<body>
-	<h1>Register</h1>
+	
 	<div>
-		<form action="register" method="post">
-			Username
-			<input type="text" name="username">
-			<br>
-			Password
-			<input type="password" name="password">
-			<br>
-			Address
-			<input type="text" name="address">
-			<br>
-			<input type="submit" value="Register">
-			
-		</form>
+		<div id="header">
+			<h1 id="nibble" onclick="goHome()">nibble.</h1>
+		</div>
+		<div id=registerSite>
+			<h1>Register</h1>
+			<form action="register" method="post">
+				<b>Username</b>
+				<input type="text" name="username">
+				<br>
+				<br>
+				<b>Password</b>
+				<input type="password" name="password">
+				<br>
+				<br>
+				<b>Address</b>
+				<input type="text" name="address">
+				<br><br>
+				<input type="submit" value="Register">
+				<br><br>
+			</form>
+		</div>
+		
 	</div>
 	</body>
+	<script type="text/javascript">
+  
+  function goHome(){
+		window.location.replace("home.jsp");
+	}
+  
+  </script>
 </html>

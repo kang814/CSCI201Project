@@ -6,23 +6,44 @@
 		<link rel="stylesheet" type="text/css" href="login.css">
 	</head>
 	<body>
-	<h1>Login</h1>
-	<div>
+	<div id="header">
+		<h1 id="nibble" onclick="goHome()">nibble.</h1>
+	</div>
+	
+	<div id="loginSite">
+		<h1>Login</h1>
 		<form action="login" method="post">
-			Username
+			<b>Username</b>
 			<input type="text" name="username">
 			<br>
-			Password
+			<br>
+			<b>Password</b>
 			<input type="password" name="password">
 			<br>
-			<a id="qr">Import QR Code</a>
 			<br>
-			<a id="guest">Guest</a>
+			<input id="login" type="submit" name="submit" value="login">
 			<br>
-			<input type="submit" name="submit" value="login">
-			
-			
+			<br>
 		</form>
 	</div>
+	<br>
+	<br>
+	
+	
+	<div id="guest">
+		<b><a id="or">OR</a></b>
+		<br>
+		<br>
+		<h1 id="inguest">Guest</h1>
+	</div>
+	
 	</body>
+	<script type="text/javascript">
+  
+  function goHome(){
+		window.location.replace("home.jsp");
+	}
+  
+  </script>
+	
 </html>

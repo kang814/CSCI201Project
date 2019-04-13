@@ -1,0 +1,20 @@
+
+#header{
+	height: 10%;
+	background-color: #E5E5E5;
+	width: 100%;
+	z-index: -1;
+	text-align: center;
+}
+
+
+#registerSite{
+	background: #ffbf91;
+	text-align: center;
+	border-style: solid;
+	width: 30%;
+	margin: auto;
+	border-radius: 5px;
+	border-color: red;
+	
+}
