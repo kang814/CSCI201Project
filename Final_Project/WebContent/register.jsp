@@ -7,18 +7,18 @@
 	</head>
 	<body>
 	<div>
-		<div id="header">
-		<h1 id="nibble" onclick="goHome()">nibble.</h1>
+		<div class=header>
+			<a href="home.jsp"><img style="margin-left: 25%; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		</div>
+	
 	
 		<br>
 		
 		
-		<div id=registerSite>
+		<div id="registerSite">
 			<h1>Register</h1>
 			<form action="register" method="post">
 				<b>Username</b>
-				
 				<input type="text" name="username">
 				<br>
 				<br>

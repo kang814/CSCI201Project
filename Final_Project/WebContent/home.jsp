@@ -15,12 +15,14 @@
   <body>
   
   	<%
-  	
   	session = request.getSession();
-  	session.setAttribute("checkLogin", false);
+  	if((boolean)session.getAttribute("checkLogin")==false){
+  		session.setAttribute("checkLogin", false);
+  	}
   	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
   	session.setAttribute("orderList", myOrder);
   	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
+  	System.out.println("Logged in is "+loggedIn);
   	%>
 
 	 

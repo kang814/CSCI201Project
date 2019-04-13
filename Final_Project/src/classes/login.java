@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class login
@@ -62,6 +63,7 @@ public class login extends HttpServlet {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfo?user=root&password=Singh1965.&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 			st = conn.createStatement(); //gives ability to create sequel statement
 			rs = st.executeQuery("SELECT * FROM user WHERE username='"+username+"'");
+			HttpSession session = request.getSession();
 			while(rs.next())
 			{
 				name = rs.getString("username");
@@ -84,13 +86,16 @@ public class login extends HttpServlet {
 			}
 			else
 			{
-				error = "";
+				error = "password";
 			}
 			
+			if(!errorb){
+				session.setAttribute("checkLogin", true);
+				System.out.println("User is now logged in!");
+			}
 			request.setAttribute("error", error);
 			//got rid of sending id
 			request.setAttribute("loginName", name);
-			
 			
 			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);
