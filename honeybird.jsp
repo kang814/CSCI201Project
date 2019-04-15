@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>HoneyBird</title>
-	  	<link rel="stylesheet" type="text/css" href="dulce.css">
+	  	<link rel="stylesheet" type="text/css" href="honeybird.css">
 		<%
 			String restaurantName = (String)request.getAttribute("restaurantName");
 		
