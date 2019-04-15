@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page import="java.util.ArrayList" %>
+<%@page import="classes.menuItem"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,19 +14,43 @@
   </head>
   <body>
   
-  	<div id="header">
-		<h1 id="nibble" onclick="goHome()">nibble.</h1>
-		<button class="topButton" id = "profile" onclick= "location.href='profile.jsp'">Profile</button>
-		<button class="topButton" id = "cart" onclick="location.href='cart.jsp'">Cart</button>
+  	<%
+  	
+  	session = request.getSession();
+  	session.setAttribute("checkLogin", false);
+  	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
+  	session.setAttribute("orderList", myOrder);
+  	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
+  	%>
+
+	 
+	<div class=header>
+		<%if(loggedIn){%>
+		<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+		<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+		<%} else{ %>
+			<a href="login.jsp"><button style="margin-left: 2.5%; margin-top: 3%; border-radius: 10px; background-color: rgb(253, 185, 41); font-family: Avenir; float: left; width: 100px; height:50px; font-size: 16px;">Login</button></a>
+			<a href="register.jsp"><button style="margin-left: 1%; margin-top: 3%; border-radius: 10px; background-color: rgb(253, 185, 41); font-family: Avenir; float:left; width: 100px; height:50px; font-size: 16px;">SignUp</button></a>
+			<p style="color: black; float: left; margin-left: -14%; margin-top: 8%;">Hey Guest Nibbler!</p>
+			<a href="home.jsp"><img style="margin-left: 250px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 			
+		<%} %>
+		<a href="checkout.jsp"><img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart"></a>
 	</div>
   
 	<h1 id = "What">What's your midnight snack today?</h1>
 	
-	<div class = "search-box">
-		<input class = "search-txt" type = "text" name = "" placeholder ="search for a restaurant">
-		<a class = "search-btn" href = "#">
-	<i class="fas fa-search"></i>
+	
+	ADDED SEARCH BOX HERE
+	<form action="searchRestaurant" method="get">
+		<div class = "search-box">
+			<input class = "search-txt" type = "text" name = "searchPlace" placeholder ="search for a restaurant">
+			<input type="submit" class = "search-btn">
+		</div>
+		<i class="fas fa-search"></i>
+	</form>
+	
+	
 		
 		</a>
 	</div>
@@ -37,7 +64,7 @@
 	<div class="scrolling-wrapper-flexbox" id = "bestDeals">
 	  <div class = "wrap">
 		  <div class="card">
-		  	<img src = "mcd.jpg" alt = "mcd" style ="width:100%">
+		  	<img src = "web_images/mcd.jpg" alt = "mcd" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>McDonald's</b></h4>
 		  		<p>Big Mac</p>
@@ -46,7 +73,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "chipotle.jpg" alt = "chipotle" style ="width:100%">
+		  	<img src = "web_images/chipotle.jpg" alt = "chipotle" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Chipotle</b></h4>
 		  		<p>Burrito Bowl</p>
@@ -55,7 +82,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "ono.jpg" alt = "ono" style ="width:100%">
+		  	<img src = "web_images/ono.jpg" alt = "ono" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Ono's Hawaiian BBQ</b></h4>
 		  		<p>Chicken BBQ Bowl</p>
@@ -64,7 +91,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "dulce.jpg" alt = "dulce" style ="width:100%">
+		  	<img src = "web_images/dulce.jpg" alt = "dulce" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Dulce Cafe</b></h4>
 		  		<p>Donuts</p>
@@ -73,7 +100,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "honeybird.jpg" alt = "honeybird" style ="width:100%">
+		  	<img src = "web_images/honeybird.jpg" alt = "honeybird" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Honeybird</b></h4>
 		  		<p>Medium Meal</p>
@@ -89,7 +116,7 @@
 	<div class="scrolling-wrapper-flexbox" id = "popularRestaurants">
 	  <div class = "wrap">
 		  <div class="card">
-		  	<img src = "chickfila-logo.png" style ="width:100%">
+		  	<img src = "web_images/chickfila-logo.png" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Chick-fil-A</b></h4>
 		  		<p>3758 S Figueroa St</p>
@@ -98,7 +125,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "bakedbear-logo.png" style ="width:100%">
+		  	<img src = "web_images/bakedbear-logo.png" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Baked Bear</b></h4>
 		  		<p>929 W Jefferson Blvd</p>
@@ -107,7 +134,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "panda-logo.png" style ="width:100%">
+		  	<img src = "web_images/panda-logo.png" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Panda Express</b></h4>
 		  		<p>3607 Trousdale Pkwy</p>
@@ -116,7 +143,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "lemonade-logo.png" style ="width:100%">
+		  	<img src = "web_images/lemonade-logo.png" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Lemonade</b></h4>
 		  		<p>3601 Trousdale Pkwy</p>
@@ -125,7 +152,7 @@
 		  </div>
 		  
 		  <div class="card">
-		  	<img src = "cava-logo.jpg" style ="width:100%">
+		  	<img src = "web_images/cava-logo.jpg" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Cava</b></h4>
 		  		<p>3201 S Hoover St</p>
