@@ -1,0 +1,44 @@
+head
+{
+	background: blue;
+
+}
+
+#logo
+{
+	position: relative;
+	align: center;
+	width: 100%;
+	height: auto;
+}
+
+#menu
+{
+	font-size: 60px;
+	text-align: center;
+}
+
+
+th
+{
+	border-style: solid;
+	border-color: red;
+	background: #ff9595;
+	
+	
+}
+td
+{
+	text-align: center;
+	align: center;
+	border-style: solid;
+	border-color: orange;
+	background:#ffe2ae;
+}
+
+table img
+{
+	width: 300px;
+	height: auto;
+	text-align: center;
+}

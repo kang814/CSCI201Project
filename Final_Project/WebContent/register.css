@@ -1,0 +1,66 @@
+
+body{
+	background-color: #c4c4c4;
+	
+}
+
+#header{
+	border-top: 8px solid black;
+	background: black;
+}
+
+.header{
+  margin-left: 2%;
+  float: left;
+  margin-left: 30%;
+  width: 40%;
+  height: 125px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid rgb(253, 185, 41);
+}
+
+.header h1 {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: black;
+  
+}
+
+
+
+#registerSite{
+	background: white;
+	text-align: center;
+	border-style: solid;
+	width: 40%;
+	margin-top: 10%;
+	margin-left: 30%;
+	border-radius: 12px;
+	font-family: Avenir;
+	color: black;
+	border: 2px solid rgb(253, 185, 41);
+	
+}
+form
+{
+	font-size: 20px;
+	
+}
+
+
+#submitButton
+{
+	font-weight: bold;
+	height: 30px;
+	width: 120px;
+	color: white;
+	border-style: solid;
+	border-radius: 5px;
+	background: #676767;
+	border-color: #333333;
+	margin-left: 5%;
+	
+	
+}
