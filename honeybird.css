@@ -1,14 +1,15 @@
-head
+body
 {
-	background: blue;
-
+	background-image: url("web_images/dulcebackground.jpg");
 }
+
 
 #logo
 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 40px;
 	position: relative;
 	align: center;
 	width: 40%;
@@ -20,6 +21,7 @@ head
 {
 	font-size: 60px;
 	text-align: center;
+	background: pink;
 }
 
 
@@ -27,7 +29,7 @@ th
 {
 	border-style: solid;
 	border-color: red;
-	background: #ff9595;
+	background: pink;
 	
 	
 }
@@ -40,9 +42,27 @@ td
 	background:#ffe2ae;
 }
 
+table
+{
+	font-size: 30px;
+}
+
 table img
 {
 	width: 300px;
 	height: auto;
 	text-align: center;
+	transition: transform 0.7s;
+}
+
+table img:hover
+{
+	transform: scale(1.4);
+}
+
+#add:hover
+{
+	background: #fe6d49;	
+	cursor: pointer;
+	
 }
