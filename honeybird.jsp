@@ -36,44 +36,44 @@
 		
 		<table style="width:100%">
 		  <tr>
-		    <th>Foods</th>
-		    <th>Image</th>
-		    <th>Price</th>
-		    <th>Add to Cart</th>
+		    <th style="font-size: 45px;">Foods</th>
+		    <th style="font-size: 45px;">Image</th>
+		    <th style="font-size: 45px;">Price</th>
+		    <th style="font-size: 26px;">Add to Cart</th>
 		  </tr>
 		  <tr>
 		    <td>Full Fried Chicken</td>
 		    <td><img src="friedchicken.jpg"></td>
 		    <td>$12.99</td>
-		    <td>Add</td>
+		    <td id="add">Add</td>
 		    
 		  </tr>
 		  <tr>
 		    <td>Half Fried Chicken</td>
 		    <td><img src="halfchicken.jpg"></td>
 		    <td>$7.99</td>
-	      	<td>Add</td>
+	      	<td id="add">Add</td>
 		   
 		  </tr>
 		  <tr>
 		    <td>12 pc Chicken Wings</td>
 		    <td><img src="chickenwings.jpg"></td>
 		    <td>$11.50</td>
-		     <td>Add</td>
+		     <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>2 pc Chicken Leg</td>
 		    <td><img src="chickenleg.jpg"></td>
 		    <td>$9.25</td>
-		     <td>Add</td>
+		     <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>French Fries</td>
 		    <td><img src="frenchfries.jpg"></td>
 		    <td>$3.45</td>
-		     <td>Add</td>
+		     <td id="add">Add</td>
 		 
 		  </tr>
 		</table>

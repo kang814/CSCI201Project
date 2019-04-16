@@ -16,6 +16,7 @@ head
 {
 	font-size: 60px;
 	text-align: center;
+	background: pink;
 }
 
 
@@ -36,9 +37,27 @@ td
 	background:#ffe2ae;
 }
 
+table
+{
+	font-size: 30px;
+}
+
 table img
 {
 	width: 300px;
 	height: auto;
 	text-align: center;
+	transition: transform 0.7s;
+}
+
+table img:hover
+{
+	transform: scale(1.4);
+}
+
+#add:hover
+{
+	background: #fe6d49;	
+	cursor: pointer;
+	
 }
