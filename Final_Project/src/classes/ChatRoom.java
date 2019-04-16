@@ -3,11 +3,13 @@ package classes;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class ChatRoom {
 
 	private Vector<ServerThread> serverThreads;
+	public ArrayList<String> lines;
 	public ChatRoom(int port) {
 		try {
 			System.out.println("Binding to port " + port);

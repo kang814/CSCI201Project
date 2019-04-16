@@ -1,7 +1,6 @@
 package classes;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,16 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class CheckOrdersServlet
+ * Servlet implementation class StartClient
  */
-@WebServlet("/CheckOrdersServlet")
-public class CheckOrdersServlet extends HttpServlet {
+@WebServlet("/StartClient")
+public class StartClient extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CheckOrdersServlet() {
+    public StartClient() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,18 +30,11 @@ public class CheckOrdersServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		ChatClient cc = new ChatClient("localhost", 6789);
 		HttpSession session = request.getSession();
-
-		//PrintWriter out = response.getWriter();
-		ChatClient fuckYOU = (ChatClient)session.getAttribute("orders");
-		ArrayList<String> ls = fuckYOU.lines;
-		session.setAttribute("ls", fuckYOU);
-		for(int i = 0; i < ls.size(); i++) {
-			System.out.println(ls.get(i));
-		}
-		RequestDispatcher rd = request.getRequestDispatcher("IncomingOrders.jsp");
+		session.setAttribute("orders", cc);
+		RequestDispatcher rd = request.getRequestDispatcher("RestaurantSide.jsp");
 		rd.forward(request, response);
-		return;
 	}
 
 	/**

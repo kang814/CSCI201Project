@@ -42,14 +42,16 @@
   
 	<h1 id = "What">What's your midnight snack today?</h1>
 	
-	
-	<form action="searchRestaurant" method="get">
+	<form action="searchRestaurant" method="get"> 
 		<div class = "search-box">
 			<input class = "search-txt" type = "text" name = "searchPlace" placeholder ="search for a restaurant">
-			<input type="submit" class = "search-btn">
-		</div>
+			<a class = "search-btn" href = "#">
 		<i class="fas fa-search"></i>
-	</form>
+	</form>	
+		</a>
+	</div>
+	
+
 	<!-- <input type="text" placeholder="Search for a restaurant" id = "search"> -->
 	
 	
