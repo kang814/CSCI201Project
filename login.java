@@ -1,4 +1,4 @@
-package none;
+package classes;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -68,6 +68,12 @@ public class login extends HttpServlet {
 				pw = rs.getString("password");
 				
 			}
+			if(username==null||username=="")
+			{
+				error = "username";
+				errorb = true;
+				nextPage = "/login.jsp";
+			}
 			
 			//check if username exists
 			if(!username.equalsIgnoreCase(name))
@@ -77,6 +83,18 @@ public class login extends HttpServlet {
 				nextPage = "/login.jsp";
 			}
 			else if(!password.equals(pw))
+			{
+				error = "password";
+				errorb= true;
+				nextPage = "/login.jsp";
+			}
+			else if(username==null)
+			{
+				error = "username";
+				errorb = true;
+				nextPage = "/login.jsp";
+			}
+			else if(password==null)
 			{
 				error = "password";
 				errorb= true;

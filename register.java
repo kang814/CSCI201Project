@@ -1,4 +1,4 @@
-package none;
+package classes;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -47,7 +47,7 @@ public class register extends HttpServlet {
 		String password = request.getParameter("password");
 		String address = request.getParameter("address");
 		String nextPage = "/registercomplete.jsp";
-		
+		String error="";
 		String usererror = "false";
 		String pwerror = "false";
 		Boolean userError = false;
@@ -56,11 +56,27 @@ public class register extends HttpServlet {
 		Statement st = null;
 		ResultSet rs = null;
 		
-		if(username==null)
+		if(password==""||password==null)
 		{
 			userError = true;
 			nextPage = "/register.jsp";
+			error="password";
 		}
+		
+		if(username==""||username==null)
+		{
+			System.out.println("USERNAME IS NULL");
+			userError = true;
+			nextPage = "/register.jsp";
+			error= "username";
+			
+		}
+		else
+		{
+		
+		}
+		
+		
 		
 		try
 		{
@@ -93,11 +109,12 @@ public class register extends HttpServlet {
 				
 			}
 			
+			request.setAttribute("error", error);
 			request.setAttribute("userError", userError);
 			request.setAttribute("username", username);
 			request.setAttribute("password", password);
 			
-			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/registercomplete.jsp");
+			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);
 		
 		}
