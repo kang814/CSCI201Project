@@ -23,8 +23,12 @@
 		  	session.setAttribute("orderList", myOrder);
 		  	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
  		%>
+ 		<div class=header>
+			<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+		</div>
+		<br>
 		
-		<img id="logo" src="dulcelogo.jpg">
+		<img id="logo" src="web_images/dulcelogo.jpg">
 		
 		<h3 id="menu">Menu</h3>
 		<table style="width:100%">
@@ -36,35 +40,35 @@
 		  </tr>
 		  <tr>
 		    <td>Cranberry Walnut</td>
-		    <td><img src="cranberry.jpg"></td>
+		    <td><img src="web_images/cranberry.jpg"></td>
 		    <td>$7.99</td>
 		    <td id="add">Add</td>
 		    
 		  </tr>
 		  <tr>
 		    <td>Asian Chicken Salad</td>
-		    <td><img src="asianchicken.jpg"></td>
+		    <td><img src="web_images/asianchicken.jpg"></td>
 		    <td>$9.50</td>
 	      	<td id="add">Add</td>
 		   
 		  </tr>
 		  <tr>
 		    <td>Mango Jicama Salad</td>
-		    <td><img src="mango.jpg"></td>
+		    <td><img src="web_images/mango.jpg"></td>
 		    <td>$9.50</td>
 		    <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>Spicy Chicken</td>
-		    <td><img src="spicychicken.jpg"></td>
+		    <td><img src="web_images/spicychicken.jpg"></td>
 		    <td>$9.25</td>
 		     <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>Dulce Club</td>
-		    <td><img src="dulceclub.jpg"></td>
+		    <td><img src="web_images/dulceclub.jpg"></td>
 		    <td>$9.25</td>
 		     <td id="add">Add</td>
 		 

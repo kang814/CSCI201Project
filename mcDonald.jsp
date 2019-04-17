@@ -30,8 +30,10 @@
 		  	
  		%>
 		
-	
-		<img id="logo" src="mcdlogo.jpg">
+		<div class=header>
+			<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+		</div>
+		<img id="logo" src="web_images/mcdlogo.jpg">
 	
 		
 		<br>
@@ -50,35 +52,35 @@
 		  </tr>
 		  <tr>
 		    <td>Snack Wrap</td>
-		    <td><img src="snackwrap.jpg"></td>
+		    <td><img src="web_images/snackwrap.jpg"></td>
 		    <td>$1.99</td>
 		    <td id="add"">Add</td>
 		    
 		  </tr>
 		  <tr>
 		    <td>Happy Meal</td>
-		    <td><img src="happymeal.jpg"></td>
+		    <td><img src="web_images/happymeal.jpg"></td>
 		    <td>$6.50</td>
 	      	<td id="add">Add</td>
 		   
 		  </tr>
 		  <tr>
 		    <td>Apple pie</td>
-		    <td><img src="applepie.jpg"></td>
+		    <td><img src="web_images/applepie.jpg"></td>
 		    <td>$1.50</td>
 		     <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>Cheese Burger</td>
-		    <td><img src="cheeseburger.jpg"></td>
+		    <td><img src="web_images/cheeseburger.jpg"></td>
 		    <td>$3.25</td>
 		     <td id="add">Add</td>
 		 
 		  </tr>
 		  <tr>
 		    <td>McMuffin</td>
-		    <td><img src="mcmuffin.jpg"></td>
+		    <td><img src="web_images/mcmuffin.jpg"></td>
 		    <td>$3.25</td>
 		     <td id="add">Add</td>
 		 

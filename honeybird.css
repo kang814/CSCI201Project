@@ -1,8 +1,18 @@
 body
 {
-	background-image: url("web_images/dulcebackground.jpg");
+		font-family: Avenir;
 }
 
+
+.header
+{
+	background: white;
+	width: 100%; 
+	height: 130px;
+	border-style: solid;
+	border-color: #fdb929;
+	
+}
 
 #logo
 {
@@ -21,15 +31,18 @@ body
 {
 	font-size: 60px;
 	text-align: center;
-	background: pink;
+	background: #fdb929;
+	color: black;
+	
 }
-
 
 th
 {
 	border-style: solid;
-	border-color: red;
-	background: pink;
+	border-color: #fdb929;
+	background: #feda8f;
+	border-radius: 5px;
+	color: #ffffff;
 	
 	
 }
