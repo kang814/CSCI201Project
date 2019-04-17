@@ -1,4 +1,5 @@
-package classes; 
+package classes;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class register
@@ -46,20 +48,38 @@ public class register extends HttpServlet {
 		String password = request.getParameter("password");
 		String address = request.getParameter("address");
 		String nextPage = "/registercomplete.jsp";
-		
+		String error="";
 		String usererror = "false";
 		String pwerror = "false";
 		Boolean userError = false;
+		
+		HttpSession session = request.getSession();
 		
 		Connection conn = null;
 		Statement st = null;
 		ResultSet rs = null;
 		
-		if(username==null)
+		if(password==""||password==null)
 		{
 			userError = true;
 			nextPage = "/register.jsp";
+			error="password";
 		}
+		
+		if(username==""||username==null)
+		{
+			System.out.println("USERNAME IS NULL");
+			userError = true;
+			nextPage = "/register.jsp";
+			error= "username";
+			
+		}
+		else
+		{
+		
+		}
+		
+		
 		
 		try
 		{
@@ -89,14 +109,19 @@ public class register extends HttpServlet {
 				ps.setString(2, password);
 				ps.setString(3, address);
 				ps.executeUpdate();
+				session.setAttribute("checkLogin", true);
+				session.setAttribute("username", username);
 				
 			}
 			
+			request.setAttribute("error", error);
 			request.setAttribute("userError", userError);
 			request.setAttribute("username", username);
 			request.setAttribute("password", password);
 			
-			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/registercomplete.jsp");
+			
+			
+			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);
 		
 		}

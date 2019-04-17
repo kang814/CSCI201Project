@@ -18,8 +18,16 @@
 	session = request.getSession();
 	//myOrder = //(ArrayList<menuItem>) session.getAttribute("orderList");
 	menuItem m = new menuItem("Fries", 1.99, "mcd");
+	menuItem n = new menuItem("Borger", 9.99, "mcd");
 	myOrder.add(m);
+	myOrder.add(n);
 	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
+	String name = "";
+	if(loggedIn)
+	{
+		//String name = (String)session.getAttribute("username");
+	}
+
 	
 	//okay so once we get the menuItems that are being ordered we can then add that to the checkout 
 	
@@ -37,7 +45,7 @@
 	total = total/100;
 	
 	
-	CustomerClient cc = new CustomerClient("localhost", 6789, myOrder);
+	CustomerClient cc = new CustomerClient("localhost", 6789, myOrder, name);
 %>
 
 
@@ -151,7 +159,7 @@
 		<h6 style="margin-left: 15%; margin-top: -8%;">(+tax)</h6>
 		
 			<div id="payButton">
-				<a href="paymentMade.jsp"><h3 style="color: white; margin-left: 25px;">Pay Now</h3></a>
+				<a href="StoreHistoryServlet"><h3 style="color: white; margin-left: 25px;">Pay Now</h3></a>
 			</div>
 		</div>
 		

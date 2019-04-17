@@ -94,11 +94,12 @@ body{
 
 }
 #paymentMade{
-  display: block; /* Hidden by default */
-  z-index: 2; /* Sit on top */
+  z-index: 1; /* Sit on top */
   margin-top: 3.25%;
-  width: 75%; /* Full width */
-  height: 450px; /* Full height */
+  float: left;
+  margin-left: 20%;
+  width: 700px; 
+  height: 250px; /* Full height */
   background-color: white; /* Fallback color */
   border-radius: 12px;  
   border: 2px solid rgb(253, 185, 41);
@@ -135,7 +136,22 @@ font-family: Avenir;
 }
 
 
-
+#modal-content-other{
+  background-color: #fefefe;
+  border-radius: 15px;
+  margin-left: 20%;
+  margin-top: 12%;
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: Avenir; 
+}
+#modal-content-other2{
+  background-color: #fefefe;
+  border-radius: 15px;
+  margin-left: 15%;
+  margin-top: 5%;
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: Avenir; 
+}
 
 
 

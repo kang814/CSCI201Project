@@ -5,6 +5,10 @@
 		<title>Register</title>
 		<link rel="stylesheet" type="text/css" href="register.css">
 	</head>
+	<%
+		String error =null;
+		error = (String)request.getAttribute("error");
+	%>
 	<body>
 	<div>
 		<div class=header>
@@ -29,6 +33,35 @@
 				<b>Address</b>
 				<input type="text" name="address">
 				<br><br>
+				<%
+				if(error=="")
+				{
+					
+				}
+				else if(error=="username")
+				{
+					%>
+					<a style="color:red;">Username Error</a>
+					
+					<% 
+				}
+				else if(error=="password")
+				{
+					%>
+						<a style="color:red;">Password Error</a>
+					<% 
+					
+				}
+				else
+				{
+					%>
+					
+					<%
+				}
+				
+				
+				%>
+				<br>
 				<input id="submitButton" type="submit" value="Register">
 				<br><br>
 			</form>

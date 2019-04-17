@@ -18,6 +18,7 @@
   	session = request.getSession();
   	if(session.getAttribute("checkLogin")==null){
   		session.setAttribute("checkLogin", false);
+  		session.setAttribute("username", "guest");
   	}
   	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
   	session.setAttribute("orderList", myOrder);
@@ -28,7 +29,7 @@
 	 
 	<div class=header>
 		<%if(loggedIn){%>
-		<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+		<a href="ProfileServlet"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
 		<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		<%} else{ %>
 			<a href="login.jsp"><button style="margin-left: 2.5%; margin-top: 3%; border-radius: 10px; background-color: rgb(253, 185, 41); font-family: Avenir; float: left; width: 100px; height:50px; font-size: 16px;">Login</button></a>

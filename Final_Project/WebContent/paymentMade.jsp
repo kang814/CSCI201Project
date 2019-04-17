@@ -12,10 +12,19 @@
 	<body>
 		<div id="paymentMade">
 			<!-- Modal content -->
-			<div class="modal-content">
+			<div id="modal-content-other">
 				<p>Congrats Your Payment Went Through!</p>
+				<p>This page should take you home soon, if not click <a href="home.jsp">here</a></p> 
 			</div>
 		</div>
 	</body>
+	
+	<script>
+	
+		window.onload=setTimeout(function () {
+	   	window.location.href = "home.jsp"; //will redirect to your blog page (an ex: blog.html)
+		}, 5000); //will call the function after 5 secs.
+		
+	</script>
 	
 </html>

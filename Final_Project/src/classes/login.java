@@ -71,6 +71,7 @@ public class login extends HttpServlet {
 				
 			}
 			
+			
 			//check if username exists
 			if(!username.equalsIgnoreCase(name))
 			{
@@ -84,18 +85,41 @@ public class login extends HttpServlet {
 				errorb= true;
 				nextPage = "/login.jsp";
 			}
-			else
+			else if(username==null)
+			{
+				error = "username";
+				errorb = true;
+				nextPage = "/login.jsp";
+			}
+			else if(password==null)
 			{
 				error = "password";
+				errorb= true;
+				nextPage = "/login.jsp";
+			}
+			else
+			{
+				error = "";
 			}
 			
-			if(!errorb){
-				session.setAttribute("checkLogin", true);
-				System.out.println("User is now logged in!");
+			if(username==null||username=="")
+			{
+				System.out.println("USERNAME IS NULL2");
+				error = "username";
+				errorb = true;
+				nextPage = "/login.jsp";
 			}
+			
 			request.setAttribute("error", error);
 			//got rid of sending id
 			request.setAttribute("loginName", name);
+			
+			if(errorb==false){
+				session.setAttribute("checkLogin", true);
+				session.setAttribute("username", name);
+			}
+			
+			
 			
 			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);
@@ -104,7 +128,7 @@ public class login extends HttpServlet {
 		}
 		catch(SQLException | ClassNotFoundException e)
 		{
-			System.out.println("e: "+e.getMessage());
+			System.out.println("e: herers"+e.getMessage());
 		}
 		
 	}

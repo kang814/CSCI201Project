@@ -19,6 +19,8 @@
 			<!-- Modal content -->
 			<div class="modal-content">
 				<p><%= l.get(0) %></p>
+				<p><%= l.get(1) %>STILL NEED TO FIX</p>
+				
 			</div>
 		</div>
 		

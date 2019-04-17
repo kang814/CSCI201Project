@@ -1,7 +1,22 @@
+body
+{
+		font-family: Avenir;
+}
+
 head
 {
 	background: blue;
 
+}
+
+.header
+{
+	background: white;
+	width: 100%; 
+	height: 130px;
+	border-style: solid;
+	border-color: #fdb929;
+	
 }
 
 #logo
@@ -16,14 +31,19 @@ head
 {
 	font-size: 60px;
 	text-align: center;
+	background: #fdb929;
+	color: black;
+	
 }
 
 
 th
 {
 	border-style: solid;
-	border-color: red;
-	background: #ff9595;
+	border-color: #fdb929;
+	background: #feda8f;
+	border-radius: 5px;
+	color: #ffffff;
 	
 	
 }
@@ -36,9 +56,27 @@ td
 	background:#ffe2ae;
 }
 
+table
+{
+	font-size: 30px;
+}
+
 table img
 {
 	width: 300px;
 	height: auto;
 	text-align: center;
+	transition: transform 0.7s;
+}
+
+table img:hover
+{
+	transform: scale(1.4);
+}
+
+#add:hover
+{
+	background: #fe6d49;	
+	cursor: pointer;
+	
 }

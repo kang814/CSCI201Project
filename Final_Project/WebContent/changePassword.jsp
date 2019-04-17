@@ -22,15 +22,14 @@
   </head>
   <body>
   
-  	<div id="header">
-		<h1 id="nibble" onclick="goHome()">nibble.</h1>
-		<button class="topButton" id = "profile" onclick= "location.href='profile.jsp'">Profile</button>
-		<button class="topButton" id = "cart" onclick="location.href='cart.jsp'">Cart</button>
-			
+  	<div class=header>
+		<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+		<a href="home.jsp"><img style="margin-left: 330px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+		<a href="checkout.jsp"><img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart"></a>
 	</div>
   
   	<div id="mainDiv">
-  		<h2>Change Your Password</h2>
+  		<h2 style="margin-left: -14%;">Change Your Password</h2>
 		<div id="register">
 		<form name="registerForm" method="post" action="ChangePasswordServlet" id="form">
 			<div class="te">Old Password</div> <br /> <input type="password" name="oldpass" class="box"/> <br />

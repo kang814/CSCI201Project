@@ -36,11 +36,11 @@ public class ChatClient extends Thread {
 				{
 					
 				
-				if(!line.isEmpty()) {
-					System.out.println("l: "+line);
-					lines.add(line);
+					if(!line.isEmpty()) {
+						System.out.println("l: "+line);
+						lines.add(line);
 					
-				}
+					}
 				}
 			}
 		} catch (IOException ioe) {

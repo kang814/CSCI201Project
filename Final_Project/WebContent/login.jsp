@@ -5,6 +5,10 @@
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="login.css">
 	</head>
+	<%
+		String error =null;
+		error = (String)request.getAttribute("error");
+	%>
 	<body>
 	
 	<div class=header>
@@ -16,6 +20,7 @@
 	<br>
 	<div id="loginSite">
 		<h1>Login</h1>
+
 		<form action="login" method="post">
 			<b>Username</b>
 			<input type="text" name="username">
@@ -27,6 +32,34 @@
 			<br>
 			<input id="login" type="submit" name="submit" value="Login">
 			<br>
+			<%
+				if(error=="")
+				{
+					
+				}
+				else if(error=="username")
+				{
+					%>
+					<a style="color:red;">Username Error</a>
+					
+					<% 
+				}
+				else if(error=="password")
+				{
+					%>
+						<a style="color:red;">Login Error</a>
+					<% 
+					
+				}
+				else
+				{
+					%>
+					
+					<%
+				}
+				
+				
+				%>
 			<br>
 		</form>
 	</div>

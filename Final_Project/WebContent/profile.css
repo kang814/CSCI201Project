@@ -6,15 +6,31 @@ html, body{
 	font-family: Avenir;
 	background-color: #E5E5E5;
 }
+
+
 #header{
-	
-	
-	magin-top: 100px;
-	height: 30%;
-	width: 100%;
-	background-color: #E5E5E5;
-	z-index: -1;
+	border-top: 8px solid black;
+	background: black;
 }
+
+.header{
+  margin-left: 2%;
+  float: left;
+  width: 95%;
+  height: 125px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid rgb(253, 185, 41);
+}
+
+.header h1 {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: black;
+  
+}
+
 
 #nibble
 {
@@ -71,7 +87,7 @@ html, body{
 
 #mainDiv {
 	position: absolute;
-	top: 20%;
+	top: 25%;
 	left: 25%;
 	width: 50%;
 	height: 60%;
@@ -103,11 +119,11 @@ h4 {
 
 
 table {
-	position: absolute;
-	top: 32%;
-	left: 36%;
+	margin-left: 20%;
 	font-size: 30px;
 	border-spacing: 25px;
+	overflow-x: scroll;
+	overflow-y: scroll;
 }
 
 button {
@@ -116,7 +132,54 @@ button {
 	left: 41.5%;
 }
 
+#info{
+  z-index: 2; /* Sit on top */
+  float:left;
+  margin-top: 4%;
+  width: 250px; /* Full width */
+  height: 150px; /* Full height */
+  background-color: white; /* Fallback color */
+  border-radius: 12px;  
+  border: 2px solid rgb(253, 185, 41);
+  font-family: Avenir; 
+  margin-left: 2%;
+  
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 15px;
+  margin-left: 10%;
+  margin-top: 7%;
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: Avenir; 
+}
+
+
+
+
+tbody {
+  overflow-y: scroll;
+  display: block;
+  height: 325px;
+  width: 400px;
+}
 .butn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 20px;
+  background: #FFC502;
+  padding: 10px 20px 10px 20px;
+  border: solid #ffc402 2px;
+  text-decoration: none;
+}
+
+.butn2 {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;

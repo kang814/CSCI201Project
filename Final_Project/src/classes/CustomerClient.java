@@ -12,7 +12,7 @@ import classes.menuItem;
 public class CustomerClient extends Thread {
 	private BufferedReader br;
 	private PrintWriter pw;
-	public CustomerClient(String hostname, int port, ArrayList<menuItem> items) {
+	public CustomerClient(String hostname, int port, ArrayList<menuItem> items, String name) {
 		try {
 			System.out.println("Trying to connect to " + hostname + ":" + port);
 			Socket s = new Socket(hostname, port);
@@ -23,12 +23,19 @@ public class CustomerClient extends Thread {
 			//Scanner scan = new Scanner(System.in);\
 			String line = "";
 			for(int i = 0; i < items.size(); i++) {
-				line = items.get(i).getName();
+				line += items.get(i).getName();
 				line += ", ";
 				line += items.get(i).getPrice();
 				line += "\n";
 			}
-			pw.println("Customer: " + line);
+			if(name.equals(""))
+			{
+				pw.println("Guest: " + line);
+			}
+			else
+			{
+				pw.println(name + line);
+			}
 			pw.flush();
 			
 		} catch (IOException ioe) {
