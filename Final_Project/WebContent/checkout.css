@@ -40,6 +40,40 @@ body{
     margin: 10px;
 }
 
+
+.butn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 20px;
+  background: #FFC502;
+  padding: 10px 20px 10px 20px;
+  border: solid #ffc402 2px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.butn:active {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 20px;
+  background: #31cd46;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+
 .scrolling-wrapper-flexbox {
   display: flex;
   flex-wrap: nowrap;
@@ -203,6 +237,10 @@ table{
   background-color: #ddd;
   color: black;
     border-radius: 20px;
+}
+
+h3:hover{
+	cursor: pointer;
 }
 
 /* Add a color to the active/current link */

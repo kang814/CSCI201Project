@@ -18,7 +18,6 @@
   	session = request.getSession();
   	if(session.getAttribute("checkLogin")==null){
   		session.setAttribute("checkLogin", false);
-  		session.setAttribute("username", "guest");
   	}
   	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
   	session.setAttribute("orderList", myOrder);
@@ -29,7 +28,7 @@
 	 
 	<div class=header>
 		<%if(loggedIn){%>
-		<a href="ProfileServlet"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+		<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
 		<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		<%} else{ %>
 			<a href="login.jsp"><button style="margin-left: 2.5%; margin-top: 3%; border-radius: 10px; background-color: rgb(253, 185, 41); font-family: Avenir; float: left; width: 100px; height:50px; font-size: 16px;">Login</button></a>
@@ -38,6 +37,8 @@
 			<a href="home.jsp"><img style="margin-left: 250px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 			
 		<%} %>
+		
+
 		<a href="checkout.jsp"><img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart"></a>
 	</div>
   
@@ -62,7 +63,7 @@
 	
 	<div class="scrolling-wrapper-flexbox" id = "bestDeals">
 	  <div class = "wrap">
-		  <div class="card">
+		  <div class="card" id = "card1" onclick = "getCardText(1)">
 		  	<img src = "web_images/mcd.jpg" alt = "mcd" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>McDonald's</b></h4>
@@ -71,7 +72,7 @@
 		  	</div>
 		  </div>
 		  
-		  <div class="card">
+		  <div class="card" id = "card2" onclick = "getCardText(2)">
 		  	<img src = "web_images/chipotle.jpg" alt = "chipotle" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Chipotle</b></h4>
@@ -80,7 +81,7 @@
 		  	</div>
 		  </div>
 		  
-		  <div class="card">
+		  <div class="card" id = "card3" onclick = "getCardText(3)">
 		  	<img src = "web_images/ono.jpg" alt = "ono" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Ono's Hawaiian BBQ</b></h4>
@@ -89,7 +90,7 @@
 		  	</div>
 		  </div>
 		  
-		  <div class="card">
+		  <div class="card" id = "card4" onclick = "getCardText(4)">
 		  	<img src = "web_images/dulce.jpg" alt = "dulce" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Dulce Cafe</b></h4>
@@ -98,7 +99,7 @@
 		  	</div>
 		  </div>
 		  
-		  <div class="card">
+		  <div class="card" id = "card5" onclick = "getCardText(5)">
 		  	<img src = "web_images/honeybird.jpg" alt = "honeybird" style ="width:100%">
 		  	<div class = "container">
 		  		<h4><b>Honeybird</b></h4>
@@ -169,6 +170,35 @@
   function goHome(){
 		window.location.replace("home.jsp");
 	}
+  
+  function getCardText(x) {
+	  if(x == 1) { var node = document.getElementById("card1"); }
+	  if(x == 2) { var node = document.getElementById("card2"); }
+	  if(x == 3) { var node = document.getElementById("card3"); }
+	  if(x == 4) { var node = document.getElementById("card4"); }
+	  if(x == 5) { var node = document.getElementById("card5"); }
+	  
+	  textContent = node.textContent;
+	  
+	  if (confirm("Add this order to cart?\n" + textContent)) {
+		  
+		  //send to servlet
+		  var xhr = new XMLHttpRequest();
+		  xhr.open("GET", "${pageContext.request.contextPath}/AddToServlet?testVar="+textContent, true);
+		  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		
+		  xhr.onreadystatechange = function () {
+		  if(xhr.readyState === 4 && xhr.status === 200) {
+		    console.log(xhr.responseText);
+		  }
+		  };
+		  xhr.send();
+		  
+		    
+	  } else {
+      	  console.log("didn't add");
+	  }	
+  }
   
   </script>
 </html>

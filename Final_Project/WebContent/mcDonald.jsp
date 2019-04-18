@@ -18,20 +18,9 @@
 	
 	<body>
 	
-		<%
-  	
-		  	session = request.getSession();
-		  	session.setAttribute("checkLogin", false);
-		  	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
-		  	session.setAttribute("orderList", myOrder);
-		  	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
-		  	
-		  	
-		  	
- 		%>
 		
 		<div class=header>
-			<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+			<a href="home.jsp"><img style="margin-left: 485px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		</div>
 		<img id="logo" src="web_images/mcdlogo.jpg">
 	
