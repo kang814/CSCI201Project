@@ -16,16 +16,13 @@
 	//Uncomment this section when done testing
 	ArrayList<menuItem> myOrder = new ArrayList<menuItem>();
 	session = request.getSession();
-	//myOrder = //(ArrayList<menuItem>) session.getAttribute("orderList");
-	menuItem m = new menuItem("Fries", 1.99, "mcd");
-	menuItem n = new menuItem("Borger", 9.99, "mcd");
-	myOrder.add(m);
-	myOrder.add(n);
+	myOrder = (ArrayList<menuItem>) session.getAttribute("orderList");
 	boolean loggedIn = (boolean)session.getAttribute("checkLogin");
-	String name = "";
+
+	String name="";
 	if(loggedIn)
 	{
-		//String name = (String)session.getAttribute("username");
+		name = (String)session.getAttribute("username");
 	}
 
 	
@@ -41,6 +38,7 @@
 		total += myOrder.get(i).getPrice();
 		System.out.println("|||||||||||||||||||");
 	}
+	total = total*1.08;
 	total = Math.round(total * 100);
 	total = total/100;
 	
@@ -159,7 +157,7 @@
 		<h6 style="margin-left: 15%; margin-top: -8%;">(+tax)</h6>
 		
 			<div id="payButton">
-				<a href="StoreHistoryServlet"><h3 style="color: white; margin-left: 25px;">Pay Now</h3></a>
+				<a style="text-decoration:none;"href="StoreHistoryServlet"><h3 style="color: white; margin-left: 25px;">Pay Now</h3></a>
 			</div>
 		</div>
 		

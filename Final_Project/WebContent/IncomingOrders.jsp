@@ -18,8 +18,11 @@
 		<div id="paymentMade">
 			<!-- Modal content -->
 			<div class="modal-content">
-				<p><%= l.get(0) %></p>
-				<p><%= l.get(1) %>STILL NEED TO FIX</p>
+			<%
+			for(int i = 0; i < l.size(); i++) {
+			%>
+				<p><%= l.get(i) %></p>
+				<%} %>
 				
 			</div>
 		</div>

@@ -22,22 +22,28 @@
 			<!-- Modal content -->
 			<div class="modal-content">
 				<form name="check" method="post" action="StartChat" id="form">
-					<input type="submit" name="submit" value="Start Chat" id="button"/>
+					<button onclick="changeToGreen(this)" class="butn" type="submit" name="submit" id="button"/>Open</button>
 				</form>
 				
 				<form name="check" method="post" action="StartClient" id="form">
-					<input type="submit" name="submit" value="Start Client" id="button"/>
+					<button onclick="changeToGreen(this)" class="butn" type="submit" name="submit" id="button"/>Start Accepting Orders</button>
 				</form>
 			
 			<form name="check" method="post" action="CheckOrdersServlet" id="form">
-					<input type="submit" name="submit" value="Check Orders" id="button"/>
+					<button onclick="changeToGreen(this)" class="butn" type="submit" name="submit" id="button"/>Check Orders</button>
 				</form>
-			
-				<p id="Restaurant">No orders yet..<p>
 				<!-- <button onclick="checkOrder();">Refresh Orders</button>-->
 			</div>
 		</div>
 		
 	</body>
+	
+	<script>
+		function changeToGreen(myVar){
+			myVar.style.background='green';
+		}
+			
+	</script>
+	
 	
 </html>

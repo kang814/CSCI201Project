@@ -60,25 +60,27 @@ td
 
 table
 {
-	font-size: 30px;
+	font-size: 28px;
+	font-family: Avenir;
 }
 
 table img
 {
-	width: 300px;
-	height: auto;
+	width: 250px;
+	height: 250px;
 	text-align: center;
 	transition: transform 0.7s;
+	border-radius: 5px;
 }
 
 table img:hover
 {
-	transform: scale(1.4);
+	transform: scale(1.1);
 }
 
 #add:hover
 {
-	background: #fe6d49;	
+	background: #fdb929;	
 	cursor: pointer;
 	
 }

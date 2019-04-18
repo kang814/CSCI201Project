@@ -17,13 +17,13 @@
 	<body>
 
  		<div class=header>
-			<a href="home.jsp"><img style="margin-left: 360px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
+			<a href="home.jsp"><img style="margin-left: 485px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		</div>
 		<br>
 		
-		<img id="logo" src="web_images/dulcelogo.jpg">
+		<img style="width: 500px; height: 300px;" id="logo" src="web_images/dulcelogo.jpg">
 		
-		<h3 id="menu">Menu</h3>
+		<h3 style="border-radius: 20px; font-family: Avenir;" id="menu">Menu</h3>
 		<table style="width:100%">
 		  <tr>
 		    <th style="font-size: 45px;">Foods</th>
@@ -43,7 +43,6 @@
 		    <td><img src="web_images/asianchicken.jpg"></td>
 		    <td>$9.50</td>
 	      	<td id="add">Add</td>
-		   
 		  </tr>
 		  <tr>
 		    <td>Mango Jicama Salad</td>

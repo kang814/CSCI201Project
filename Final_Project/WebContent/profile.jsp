@@ -22,7 +22,7 @@
   	%>
   
   	<div class=header>
-		<a href="profile.jsp"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
+		<a href="ProfileServlet"><img style="margin-left: 10px; float:left; width: 125px; height: 125px;" src="./web_images/person_icon_image.png" alt="Profile Image"></a>
 		<a href="home.jsp"><img style="margin-left: 330px; float:left; width: 300px; height: 125px;" src="./web_images/nibble.png" alt="nibble"></a>
 		<a href="checkout.jsp"><img style="margin-right: 10px; float:right; width: 125px; height: 125px;" src="./web_images/cart_test_image.png" alt="Cart"></a>
 	</div>
@@ -31,15 +31,22 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 			<p style="font-size: 22px;">Profile Info </p>
-			<p style="font-size: 20px;">U: <strong><%=(String) session.getAttribute("username")%></strong></p>
+			<p style="font-size: 20px;">User: <strong><%=(String) session.getAttribute("username")%></strong></p>
 		</div>
 	</div>
  
   	<div id="mainDiv">
 		
 		<!-- <input type="text" placeholder="Search for a restaurant" id = "search"> -->
+		<p style="margin-left: 40%; font-size: 20px;"><strong>Order History</strong></p>
 		<table>
 			<%
+			
+			if(queue.isEmpty()){%>
+				<tr>
+					<td>You have no orders.</td>
+				</tr>
+			}else{
 			while(!queue.isEmpty()) {
 				Pair p = queue.removeLast();
 				Date d = (Date)p.getValue();
@@ -51,38 +58,16 @@
 				<td><%= dabOnHaters %></td><td><%= dab %></td>
 			</tr>
 			<%
+				}
 			}
 			%>
-			
-			<!--  
-			<tr>
-				<td>TacoBell</td><td>11-1-2018</td>
-			</tr>
-			<tr>
-				<td>Wendys</td><td>12-8-2018</td>
-			</tr>
-			<tr>
-				<td>Chipotle</td><td>1-3-2019</td>
-			</tr>
-			<tr>
-				<td>McDonalds</td><td>10-20-2018</td>
-			</tr>
-			<tr>
-				<td>TacoBell</td><td>11-1-2018</td>
-			</tr>
-			<tr>
-				<td>Wendys</td><td>12-8-2018</td>
-			</tr>
-			<tr>
-				<td>Chipotle</td><td>1-3-2019</td>
-			</tr> -->
 		</table>
 		
 	</div>
 	
 	
-	<button style="margin-left: 100px; type="button" class="butn" onclick="location.href='changePassword.jsp'">Change Password</button>
-	<button style="margin-left: -20px; "type="button" class="butn" onclick="location.href='signout'">Signout</button>
+	<button style="width: 220px; margin-top: 7.5%; margin-left: 130px; type="button" class="butn" onclick="location.href='changePassword.jsp'">Change Password</button>
+	<button style="width: 220px; margin-top: 7.5%; margin-left: -110px; "type="button" class="butn" onclick="location.href='signout'">Signout</button>
 	
 	
   </body>
